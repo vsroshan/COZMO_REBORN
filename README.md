@@ -25,6 +25,11 @@ Rather than building another conversational robot, the objective is to investiga
 The project begins with the original Anki Cozmo, a compact consumer robot featuring a camera, display, motors and onboard sensors.
 
 A Raspberry Pi 3 is the proposed embedded computing platform, with a MacBook Pro initially serving as the development and experimentation environment.
+##  Current Status
+
+**Initiated: 3 November 2026**
+
+Currently beginning with hardware verification, SDK exploration, and establishing the development environment.
 
 ## Core Research Areas
 
