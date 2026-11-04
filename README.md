@@ -58,3 +58,34 @@ Cozmo Reborn aims to evolve into a modular experimental framework for investigat
 The initial focus is a single robot. Future exploration may extend to other robotic platforms, including aerial robotics, to investigate how common intelligence architectures can adapt to different physical embodiments.
 
 **The central idea: Intelligence should not stop at understanding the world. It should be able to interact with it, observe the consequences and adapt.**
+## Development Log
+
+### Experiment 001 — First Hardware Connection
+
+**Status:** Completed  
+**Date:** 4 November 2026
+
+**Objective:** Establish a direct connection between the original Anki Cozmo robot and a Python-based control system using an independent, open-source library.
+
+**Hardware and software:**
+- Original Anki Cozmo robot
+- MacBook Pro
+- Python 3.11
+- PyCozmo (third-party Python library)
+
+**Implementation:**
+
+Created and executed `first_connection.py` to establish a connection with Cozmo and send physical movement commands.
+
+The experiment:
+1. Established a connection with the robot.
+2. Sent a command to raise Cozmo's head.
+3. Sent a second command to return its head to the neutral position.
+
+**Result:** Successful. Cozmo physically moved its head in response to both commands.
+
+**Research significance:**
+
+This establishes the first working communication and control pathway between the development environment and the physical robot. It provides the foundation for future perception, closed-loop reasoning and embodied intelligence experiments.
+
+**Next experiment:** Experiment 002 — Access Cozmo's onboard camera and capture an image for computer vision experiments.
