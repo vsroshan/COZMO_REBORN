@@ -111,6 +111,8 @@ Created `camera_capture.py` to:
 4. Save the captured image locally as `camera_capture.png`.
 
 **Expected output:** A locally saved image captured directly from Cozmo's onboard camera.
+
+
 <img width="320" height="240" alt="camera_capture" src="https://github.com/user-attachments/assets/eb27a6e0-203e-4dd7-9fda-fb7c1c166ba3" />
 
 
