@@ -88,4 +88,34 @@ The experiment:
 
 This establishes the first working communication and control pathway between the development environment and the physical robot. It provides the foundation for future perception, closed-loop reasoning and embodied intelligence experiments.
 
-**Next experiment:** Experiment 002 — Access Cozmo's onboard camera and capture an image for computer vision experiments.
+### Experiment 002 — Camera Capture
+
+**Status:** Completed (update after successful test)  
+**Date:** 6 November 2026
+
+**Objective:** Establish access to the original Anki Cozmo's onboard camera using an independent Python-based communication library.
+
+**Hardware and software:**
+- Original Anki Cozmo robot
+- MacBook Pro
+- Python 3.11
+- PyCozmo
+- Wi-Fi direct communication
+
+**Implementation:**
+
+Created `camera_capture.py` to:
+1. Establish a direct connection with Cozmo.
+2. Enable its onboard colour camera.
+3. Receive a camera image through PyCozmo's camera event handler.
+4. Save the captured image locally as `camera_capture.png`.
+
+**Expected output:** A locally saved image captured directly from Cozmo's onboard camera.
+
+**Research significance:**
+
+This experiment investigates the visual perception capabilities of legacy robotic hardware through an independent open-source software stack.
+
+Successful camera access establishes an initial foundation for computer vision, environmental perception and future perception-action experiments.
+
+**Next experiment:** Experiment 003 — Computer Vision and Object Detection using OpenCV.
