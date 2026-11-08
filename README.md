@@ -122,4 +122,37 @@ This experiment investigates the visual perception capabilities of legacy roboti
 
 Successful camera access establishes an initial foundation for computer vision, environmental perception and future perception-action experiments.
 
-**Next experiment:** Experiment 003 — Computer Vision and Object Detection using OpenCV.
+Experiment 003 — Computer Vision Pipeline
+
+<details>
+<summary>In Progress — Image Processing</summary>
+
+Developing an initial computer vision pipeline using OpenCV and NumPy.
+
+Planned implementation:
+
+Load an image captured by Cozmo.
+
+Resize and preprocess the image.
+
+Convert the image to grayscale.
+
+Apply Gaussian blur.
+
+Perform Canny edge detection.
+
+Calculate edge density.
+
+Save processed visual outputs.
+
+Expected outputs:
+
+resized.png
+
+grayscale.png
+
+edges.png
+
+comparison.png
+
+This experiment establishes a basic image-processing foundation. It does not yet perform semantic object recognition or scene understanding.
