@@ -113,7 +113,8 @@ Created `camera_capture.py` to:
 **Expected output:** A locally saved image captured directly from Cozmo's onboard camera.
 
 
-<img width="320" height="240" alt="camera_capture" src="https://github.com/user-attachments/assets/eb27a6e0-203e-4dd7-9fda-fb7c1c166ba3" />
+<img width="320" height="240" alt="camera_capture" src="https://github.com/user-attachments/assets/9ecf1997-65f6-46e8-a69a-2403b57873ef" />
+
 
 
 **Research significance:**
@@ -145,3 +146,22 @@ Calculate edge density.
 Save processed visual outputs.
 
 This experiment establishes a basic image-processing foundation. It does not yet perform semantic object recognition or scene understanding.
+
+<img width="640" height="480" alt="resized" src="https://github.com/user-attachments/assets/03c55b9d-4c95-4e72-9be7-1cef31d984e6" />
+
+
+<img width="640" height="480" alt="grayscale" src="https://github.com/user-attachments/assets/ab59f1d1-a6d9-451a-936a-9dcfe3e8716f" />
+
+
+<img width="640" height="480" alt="edges" src="https://github.com/user-attachments/assets/ca5ed9d0-8a98-4b00-9247-527d3118eea0" />
+
+
+<img width="1280" height="480" alt="comparison" src="https://github.com/user-attachments/assets/9f69b82b-c4de-472a-9b1f-d61c70235cb4" />
+
+
+
+
+
+
+
+
