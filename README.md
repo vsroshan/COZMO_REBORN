@@ -124,8 +124,7 @@ Successful camera access establishes an initial foundation for computer vision, 
 
 Experiment 003 — Computer Vision Pipeline
 
-<details>
-<summary>In Progress — Image Processing</summary>
+In Progress — Image Processing
 
 Developing an initial computer vision pipeline using OpenCV and NumPy.
 
@@ -144,15 +143,5 @@ Perform Canny edge detection.
 Calculate edge density.
 
 Save processed visual outputs.
-
-Expected outputs:
-
-resized.png
-
-grayscale.png
-
-edges.png
-
-comparison.png
 
 This experiment establishes a basic image-processing foundation. It does not yet perform semantic object recognition or scene understanding.
