@@ -159,6 +159,46 @@ This experiment establishes a basic image-processing foundation. It does not yet
 <img width="1280" height="480" alt="comparison" src="https://github.com/user-attachments/assets/9f69b82b-c4de-472a-9b1f-d61c70235cb4" />
 
 
+Experiment 004 — AI-Based Object Detection
+
+Status: In Progress
+
+Objective: Explore AI-based object recognition using a YOLO object detection model.
+
+Planned implementation:
+
+Load an image captured using Cozmo's camera.
+
+Load the YOLOv8 Nano model.
+
+Run object detection on the image.
+
+Identify recognised object classes.
+
+Retrieve model confidence scores.
+
+Draw bounding boxes around detected objects.
+
+Save the annotated image.
+
+Technology:
+
+Ultralytics YOLO
+
+OpenCV
+
+Python
+
+Expected output:
+
+detection_output/detected_objects.png
+
+Research direction: Investigate how visual recognition can become part of a robot's perception pipeline.
+
+Current limitation: This experiment analyses a saved image. It does not yet provide live camera detection, autonomous decisions or physical reactions.
+
+
+
 
 
 
