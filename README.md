@@ -196,6 +196,53 @@ detection_output/detected_objects.png
 Research direction: Investigate how visual recognition can become part of a robot's perception pipeline.
 
 Current limitation: This experiment analyses a saved image. It does not yet provide live camera detection, autonomous decisions or physical reactions.
+Experiment 004 — AI-Based Object Detection
+
+Status: In Progress
+
+Objective: Explore AI-based object recognition using YOLO.
+
+Planned implementation:
+
+Load a Cozmo camera image.
+
+Load the YOLOv8 Nano model.
+
+Run object detection.
+
+Identify recognised object classes.
+
+Retrieve confidence scores.
+
+Generate annotated images with bounding boxes.
+
+Expected output:
+
+detection_output/detected_objects.png
+
+Current limitation: This experiment analyses a saved image rather than a live camera stream.
+
+Experiment 005 — Perception-to-Action
+
+Status: In Progress
+
+Objective: Connect AI-based visual recognition to physical robot behaviour.
+
+This experiment introduces a basic perception-to-action architecture.
+
+Implementation:
+
+Load an image captured by Cozmo.
+
+Run YOLO object detection.
+
+Identify whether a person is detected.
+
+Apply a confidence threshold.
+
+Select a corresponding robot action.
+
+Send a head-position command to Cozmo.
 
 
 
