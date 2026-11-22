@@ -1,252 +1,291 @@
-# 🤖 Cozmo Reborn
-
+# Cozmo Reborn
 ### Open Research in Resource-Aware Embodied Intelligence
 
-**Cozmo Reborn** is an independent open-source research and engineering project exploring how modern AI architectures can enable intelligent physical behaviour on resource-constrained and legacy robotic platforms.
+An open research project exploring resource-aware embodied intelligence and modular AI architectures on legacy robotic platforms.
 
-Using the original Anki Cozmo as its initial experimental platform, the project investigates the intersection of Physical AI, embodied intelligence, edge computing, computer vision, autonomous decision-making and robotics.
+Cozmo Reborn investigates how small, resource-constrained robots can perceive their surroundings, make decisions, interact with the physical world and adapt through experience.
 
-Rather than building another conversational robot, the objective is to investigate the underlying intelligence that enables physical systems to perceive their surroundings, reason about possible actions, execute decisions, evaluate outcomes and adapt to changing environments.
+Rather than building another conversational robot, this project focuses on the engineering and research challenges behind reliable, adaptive physical intelligence.
+
+---
 
 ## Research Question
 
 **How can resource-constrained robotic systems achieve reliable, adaptive and context-aware physical behaviour through modular, open-source AI architectures?**
 
-## Research Objectives
+## Research Areas
 
-1. **Resource-Aware Intelligence:** Investigate how AI workloads can be distributed between embedded hardware and external computing resources.
-2. **Closed-Loop Reasoning:** Explore perception-action-feedback architectures that evaluate the physical consequences of robot actions.
-3. **Uncertainty-Aware Autonomy:** Investigate decision-making under incomplete observations and uncertain environmental conditions.
-4. **Experience-Based Adaptation:** Explore memory, feedback and learning mechanisms that improve subsequent robot decisions.
-5. **Hardware-Agnostic Intelligence:** Develop modular software components that can eventually be adapted across multiple robotic embodiments.
+1. **Resource-Aware Intelligence** — Local and cloud inference, computational constraints, latency and offline resilience.
+2. **Closed-Loop Physical Reasoning** — Perception, interpretation, action and feedback.
+3. **Uncertainty-Aware Autonomy** — Recognising uncertainty and making safe decisions.
+4. **Learning from Physical Experience** — Episodic memory, experience logging and behavioural adaptation.
+5. **Hardware-Independent Architecture** — Modular AI components that can extend across robotic platforms.
 
-## Initial Experimental Platform
+---
 
-The project begins with the original Anki Cozmo, a compact consumer robot featuring a camera, display, motors and onboard sensors.
+## Hardware Platform
 
-A Raspberry Pi 3 is the proposed embedded computing platform, with a MacBook Pro initially serving as the development and experimentation environment.
-##  Current Status
+The initial platform is the original Anki Cozmo robot.
 
-**Initiated: 3 November 2026**
+| Component | Purpose |
+|---|---|
+| Original Anki Cozmo | Physical robotic platform |
+| Cozmo camera | Visual input |
+| Motors and actuators | Physical movement |
+| Microphone | Future audio experimentation |
+| MacBook Pro | Primary development environment |
+| Raspberry Pi 3 | Potential future edge-computing platform |
 
-Currently beginning with hardware verification, SDK exploration, and establishing the development environment.
+The project uses PyCozmo, an independent community-developed Python implementation, to communicate with the original Cozmo hardware.
 
-## Core Research Areas
+---
 
-- Physical AI and embodied intelligence
-- Edge AI and resource-constrained inference
-- Vision-language-action architectures
-- Sensorimotor feedback systems
-- World models and predictive reasoning
-- Autonomous decision-making
-- Uncertainty estimation and failure recovery
-- Modular robotics software
-- Multi-platform embodied intelligence
+## Technology Stack
 
-## Development Philosophy
+- Python
+- PyCozmo
+- OpenCV
+- NumPy
+- Ultralytics YOLO
+- Computer Vision
+- Robotics and Control Systems
+- Edge AI
+- Resource-Constrained Computing
 
-The project follows an experiment-driven, open-source development approach.
+---
 
-Architectural decisions, experiments, observations, limitations and evaluation results will be documented transparently.
+## Development Progress
 
-The objective is to develop reproducible experiments and investigate meaningful engineering and research questions rather than simply integrate existing AI services into a robotic platform.
+### Experiment 001 — Direct Hardware Connection
 
-## Long-Term Vision
+**Status: Completed**
 
-Cozmo Reborn aims to evolve into a modular experimental framework for investigating embodied intelligence across different physical systems.
+Established direct communication between the development machine and the original Cozmo robot using PyCozmo.
 
-The initial focus is a single robot. Future exploration may extend to other robotic platforms, including aerial robotics, to investigate how common intelligence architectures can adapt to different physical embodiments.
+Implemented:
+- Python virtual environment setup.
+- PyCozmo installation.
+- Direct robot communication.
+- Head-position commands.
+- Physical actuator testing.
 
-**The central idea: Intelligence should not stop at understanding the world. It should be able to interact with it, observe the consequences and adapt.**
-## Development Log
-
-### Experiment 001 — First Hardware Connection
-
-**Status:** Completed  
-**Date:** 4 November 2026
-
-**Objective:** Establish a direct connection between the original Anki Cozmo robot and a Python-based control system using an independent, open-source library.
-
-**Hardware and software:**
-- Original Anki Cozmo robot
-- MacBook Pro
-- Python 3.11
-- PyCozmo (third-party Python library)
-
-**Implementation:**
-
-Created and executed `first_connection.py` to establish a connection with Cozmo and send physical movement commands.
-
-The experiment:
-1. Established a connection with the robot.
-2. Sent a command to raise Cozmo's head.
-3. Sent a second command to return its head to the neutral position.
-
-**Result:** Successful. Cozmo physically moved its head in response to both commands.
-
-**Research significance:**
-
-This establishes the first working communication and control pathway between the development environment and the physical robot. It provides the foundation for future perception, closed-loop reasoning and embodied intelligence experiments.
+**Result:** Cozmo successfully moved its head in response to Python commands.
 
 ### Experiment 002 — Camera Capture
 
-**Status:** Completed (update after successful test)  
-**Date:** 6 November 2026
+**Status: In Progress**
 
-**Objective:** Establish access to the original Anki Cozmo's onboard camera using an independent Python-based communication library.
+**Objective:** Establish a visual data acquisition pipeline using Cozmo's onboard camera.
 
-**Hardware and software:**
-- Original Anki Cozmo robot
-- MacBook Pro
-- Python 3.11
-- PyCozmo
-- Wi-Fi direct communication
+Planned implementation:
+- Enable the camera.
+- Receive camera image data.
+- Capture and save an image.
+- Verify image quality and resolution.
+
+Expected output: `camera_capture.png`
+
+### Experiment 003 — Computer Vision Pipeline
+
+**Status: In Progress**
+
+**Objective:** Process visual input using OpenCV and NumPy.
+
+Planned implementation:
+- Load the camera image.
+- Resize and preprocess the image.
+- Convert the image to grayscale.
+- Apply Gaussian blur.
+- Perform Canny edge detection.
+- Calculate edge density.
+- Save processed outputs.
+
+Expected outputs:
+- `resized.png`
+- `grayscale.png`
+- `edges.png`
+- `comparison.png`
+
+**Technical note:** Edge detection identifies visual boundaries. It does not independently identify objects or understand a scene.
+
+### Experiment 004 — AI-Based Object Detection
+
+**Status: In Progress**
+
+**Objective:** Explore AI-based object recognition using YOLO.
+
+Planned implementation:
+- Load a Cozmo camera image.
+- Load the YOLOv8 Nano model.
+- Run object detection.
+- Identify recognised object classes.
+- Retrieve confidence scores.
+- Generate annotated images with bounding boxes.
+
+Expected output:
+
+`detection_output/detected_objects.png`
+
+**Current limitation:** This experiment analyses a saved image rather than a live camera stream.
+
+### Experiment 005 — Perception-to-Action
+
+**Status: In Progress**
+
+**Objective:** Connect AI-based visual recognition to physical robot behaviour.
+
+Implementation:
+- Load an image captured by Cozmo.
+- Run YOLO object detection.
+- Identify whether a person is detected.
+- Apply a confidence threshold.
+- Select a corresponding robot action.
+- Send a head-position command to Cozmo.
+
+**Decision logic:**
+
+| Detection result | Robot response |
+|---|---|
+| Person detected above confidence threshold | Raise head |
+| No qualifying person detected | Return head to neutral position |
+
+**Architecture:**
+
+Visual Input → AI Perception → Decision Logic → Physical Action
+
+**Research significance:** Introduces an initial connection between machine perception and physical actuator commands.
+
+**Current limitation:** Uses a previously captured image. It is not yet continuous, real-time or closed-loop autonomous behaviour.
+
+### Experiment 006 — Spatial Perception & Adaptive Head Positioning
+
+**Status: In Progress**
+
+**Objective:** Explore how the spatial position of a detected person can influence a robot's physical response.
+
+This experiment extends basic object detection by using the vertical location of a detected person's bounding box.
 
 **Implementation:**
+- Load a previously captured Cozmo camera image.
+- Run YOLO person detection.
+- Identify the largest qualifying person detection.
+- Calculate the vertical centre of the bounding box.
+- Normalise the position relative to image height.
+- Calculate a target head angle.
+- Apply a centre dead zone.
+- Send the calculated head-position command to Cozmo.
+- Save an annotated detection image.
 
-Created `camera_capture.py` to:
-1. Establish a direct connection with Cozmo.
-2. Enable its onboard colour camera.
-3. Receive a camera image through PyCozmo's camera event handler.
-4. Save the captured image locally as `camera_capture.png`.
+**Decision logic:**
 
-**Expected output:** A locally saved image captured directly from Cozmo's onboard camera.
+| Person's vertical position | Intended robot response |
+|---|---|
+| Upper image region | Raise head |
+| Centre region | Keep head near neutral |
+| Lower image region | Lower head |
+| No qualifying person detected | Return head to neutral |
 
+**Core architecture:**
 
-<img width="320" height="240" alt="camera_capture" src="https://github.com/user-attachments/assets/9ecf1997-65f6-46e8-a69a-2403b57873ef" />
-
-
+Visual Input → Object Detection → Spatial Analysis → Action Selection → Physical Movement
 
 **Research significance:**
 
-This experiment investigates the visual perception capabilities of legacy robotic hardware through an independent open-source software stack.
+Introduces spatially informed action selection. Instead of responding only to an object's presence, the robot uses information about where the object appears in the image.
 
-Successful camera access establishes an initial foundation for computer vision, environmental perception and future perception-action experiments.
+**Expected output:**
 
-Experiment 003 — Computer Vision Pipeline
+`spatial_output/spatial_detection.png`
 
-In Progress — Image Processing
+**Current limitations:**
+- Uses a saved image rather than live camera input.
+- Only processes person detections.
+- Does not perform continuous person tracking.
+- Does not yet use feedback to correct movement.
+- Head-position mapping is experimental and requires physical calibration.
+- Does not yet implement autonomous behavioural adaptation.
 
-Developing an initial computer vision pipeline using OpenCV and NumPy.
+---
 
-Planned implementation:
+## Repository Structure
 
-Load an image captured by Cozmo.
+```text
+cozmo-reborn/
+│
+├── first_connection.py
+├── camera_capture.py
+├── vision_analysis.py
+├── object_detection.py
+├── perception_to_action.py
+├── spatial_attention.py
+│
+├── vision_output/
+├── detection_output/
+├── spatial_output/
+│
+├── docs/
+│   └── evidence/
+│
+├── DEVLOG.md
+├── README.md
+├── .gitignore
+└── requirements.txt
+```
 
-Resize and preprocess the image.
+The repository structure will evolve as additional modules and experiments are introduced.
 
-Convert the image to grayscale.
+---
 
-Apply Gaussian blur.
+## Development Philosophy
 
-Perform Canny edge detection.
+Cozmo Reborn follows an experiment-driven and modular development approach.
 
-Calculate edge density.
+Each experiment aims to:
 
-Save processed visual outputs.
+- Address a specific technical question.
+- Produce a reproducible implementation.
+- Validate behaviour through observable results.
+- Document limitations and failures.
+- Build towards a larger integrated architecture.
 
-This experiment establishes a basic image-processing foundation. It does not yet perform semantic object recognition or scene understanding.
+Verified results are distinguished from ongoing experiments and future research objectives.
 
-<img width="640" height="480" alt="resized" src="https://github.com/user-attachments/assets/03c55b9d-4c95-4e72-9be7-1cef31d984e6" />
+---
 
+## Long-Term Vision
 
-<img width="640" height="480" alt="grayscale" src="https://github.com/user-attachments/assets/ab59f1d1-a6d9-451a-936a-9dcfe3e8716f" />
+The long-term objective is to develop an open, modular embodied intelligence architecture that can operate across constrained robotic platforms.
 
+Potential future capabilities include:
 
-<img width="640" height="480" alt="edges" src="https://github.com/user-attachments/assets/ca5ed9d0-8a98-4b00-9247-527d3118eea0" />
+- Visual perception and scene understanding.
+- Object detection and recognition.
+- Spatial awareness and object tracking.
+- Context-aware physical interaction.
+- Real-time perception and feedback.
+- Closed-loop movement and control.
+- Local AI inference and edge computing.
+- Memory-based adaptation.
+- Uncertainty-aware decision-making.
+- Cross-platform robotic experimentation.
 
+These are future research directions, not claims of existing functionality.
 
-<img width="1280" height="480" alt="comparison" src="https://github.com/user-attachments/assets/9f69b82b-c4de-472a-9b1f-d61c70235cb4" />
+---
 
+## Open Research
 
-Experiment 004 — AI-Based Object Detection
+Cozmo Reborn is an evolving independent research and engineering project.
 
-Status: In Progress
+The intention is to document the process openly, publish reproducible experiments, evaluate system behaviour and contribute to the broader exploration of embodied intelligence.
 
-Objective: Explore AI-based object recognition using a YOLO object detection model.
+**The objective is not simply to make a robot respond. It is to investigate how a robot can perceive, reason, act and learn within the constraints of the physical world.**
 
-Planned implementation:
+---
 
-Load an image captured using Cozmo's camera.
-
-Load the YOLOv8 Nano model.
-
-Run object detection on the image.
-
-Identify recognised object classes.
-
-Retrieve model confidence scores.
-
-Draw bounding boxes around detected objects.
-
-Save the annotated image.
-
-Technology:
-
-Ultralytics YOLO
-
-OpenCV
-
-Python
-
-Expected output:
-
-detection_output/detected_objects.png
-
-Research direction: Investigate how visual recognition can become part of a robot's perception pipeline.
-
-Current limitation: This experiment analyses a saved image. It does not yet provide live camera detection, autonomous decisions or physical reactions.
-Experiment 004 — AI-Based Object Detection
-
-Status: In Progress
-
-Objective: Explore AI-based object recognition using YOLO.
-
-Planned implementation:
-
-Load a Cozmo camera image.
-
-Load the YOLOv8 Nano model.
-
-Run object detection.
-
-Identify recognised object classes.
-
-Retrieve confidence scores.
-
-Generate annotated images with bounding boxes.
-
-Expected output:
-
-detection_output/detected_objects.png
-
-Current limitation: This experiment analyses a saved image rather than a live camera stream.
-
-Experiment 005 — Perception-to-Action
-
-Status: In Progress
-
-Objective: Connect AI-based visual recognition to physical robot behaviour.
-
-This experiment introduces a basic perception-to-action architecture.
-
-Implementation:
-
-Load an image captured by Cozmo.
-
-Run YOLO object detection.
-
-Identify whether a person is detected.
-
-Apply a confidence threshold.
-
-Select a corresponding robot action.
-
-Send a head-position command to Cozmo.
-
-
-
-
+**Project:** Cozmo Reborn  
+**Focus:** Resource-Aware Embodied Intelligence  
+**Status:** Active Development
 
 
 
